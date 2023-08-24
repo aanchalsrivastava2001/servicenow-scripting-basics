@@ -1,0 +1,95 @@
+Wap to store two arrays users and roles and find out which user has how many roles. Take the given arrays as input.
+
+
+var users = [
+	{
+        "name": "Ross",
+        "user_id": "ross_123",
+        "active": true,
+        "phone": '99999999',
+        "sys_id": "fdsfsadfsdfdsfstehfdg"
+    },
+
+    {
+        "name": "Rachel",
+        "user_id": "rachel_123",
+        "active": true,
+        "phone": '99999999',
+        "sys_id": "8309584309jklmfkds090"
+    },
+
+    {
+        "name": "Joey",
+        "user_id": "joey_123",
+        "active": false,
+        "phone": '99999999',
+        "sys_id": "854309850938509kfndflk"
+    },
+
+    {
+        "name": "Pheobe",
+        "user_id": "pheobe_123",
+        "active": false,
+        "phone": '99999999',
+        "sys_id": "584095830958flkjdflkfdsadf"
+    },
+
+    {
+        "name": "Chandler",
+        "user_id": "chandler_123",
+        "active": true,
+        "phone": '99999999',
+        "sys_id ": "7987432984720943820940984320 "
+    },
+	{
+        "name": "Monica",
+        "user_id": "monica_123",
+        "active": true,
+        "phone": '99999999',
+        "sys_id": "fds709fsd09f809sd8f0sadfasfdsa"
+    }
+
+];
+
+var roles = [
+	{
+        "user_sys_id": "fdsfsadfsdfdsfstehfdg",
+        "role": "Project Manager"
+    },
+    {
+        "user_sys_id": "fdsfsadfsdfdsfstehfdg",
+        "role": "Developer"
+    },
+    {
+        "user_sys_id": "fdsfsadfsdfdsfstehfdg",
+        "role": "Scrum Master"
+    },
+
+    {
+        "user_sys_id": "8309584309jklmfkds090",
+        "role": "Project Manager"
+    },
+    {
+        "user_sys_id": "8309584309jklmfkds090",
+        "role": "Developer"
+    },
+    {
+        "user_sys_id": "fds709fsd09f809sd8f0sadfasfdsa",
+        "role": "Scrum Master"
+    }
+
+];
+
+
+for (var key in users) {
+    var user_id = users[key].sys_id;
+    var count = 0;
+    for (var i in roles) {
+        if (user_id == roles[i].user_sys_id) {
+            count++;
+
+        }
+      
+    }
+  gs.print(users[key].name + " has " + count);
+}
