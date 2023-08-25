@@ -1,0 +1,78 @@
+
+
+create an object with following key values operations and print all the keys with values
+
+var input_arr = [4, 7, 9, 30, 23, 87, 90, 98, 89, 78, 88, 90, 74, 87];
+
+operations(input_arr);
+
+function operations(a) {
+
+    var sum = 0;
+
+    var max_val = 0;
+
+    var min_val = 0;
+
+    var odd_elements = [];
+
+    var even_elements = [];
+
+    for (var i in a) {
+
+        sum = sum + a[i];
+
+        max_val = Math.max.apply(Math, a);
+
+        min_val = Math.min.apply(Math, a);
+
+        if (a[i] % 2 == 0) {
+
+            even_elements.push(a[i]);
+
+        } else {
+
+            odd_elements.push(a[i]);
+
+        }
+
+        var output_obj_first_function = {
+
+            "sum_of_array": sum,
+
+            "max_value": max_val,
+
+            "min_value": min_val,
+
+            "odd_elements": odd_elements,
+
+            "even_elements": even_elements
+
+
+        };
+
+    }
+
+    print(output_obj_first_function);
+
+}
+
+function print(val) {
+
+    var key_names = Object.keys(val);
+     var i=0;
+    for (var key in val) {
+        gs.print(key_names[i] + ": " + val[key]);
+i++;
+    }
+
+
+for(key2 in val){
+
+gs.print("KEY " + key2);
+gs.print("VALUE " : val[key2])
+
+}
+
+
+}
