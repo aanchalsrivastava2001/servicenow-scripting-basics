@@ -2,6 +2,10 @@
 
 create an object with following key values operations and print all the keys with values
 
+
+
+//create an object with following key values operations and print all the keys with values
+
 var input_arr = [4, 7, 9, 30, 23, 87, 90, 98, 89, 78, 88, 90, 74, 87];
 
 operations(input_arr);
@@ -59,18 +63,17 @@ function operations(a) {
 
 function print(val) {
 
-    var key_names = Object.keys(val);
-     var i=0;
-    for (var key in val) {
-        gs.print(key_names[i] + ": " + val[key]);
-i++;
-    }
+//     var key_names = Object.keys(val);
+//      var i=0;
+//     for (var key in val) {
+//         gs.print(key_names[i] + ": " + val[key]);
+// i++;
+//     }
 
 
 for(key2 in val){
 
-gs.print("KEY " + key2);
-gs.print("VALUE " : val[key2])
+gs.print(key2+ ": " + val[key2]);
 
 }
 
